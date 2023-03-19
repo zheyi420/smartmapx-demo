@@ -45,3 +45,11 @@ npm run build
 ```sh
 npm run lint
 ```
+
+## About 'VITE_BUILD_PATH_PREFIX'
+
+The files `.env.development` and `.env.production` are configs for development and production environment.
+
+Since it is deployed on GitHub Pages `https://<USERNAME>.github.io/<REPO>/`, you need to set `VITE_BUILD_PATH_PREFIX='<REPO>'` to refer to the static files in `/public`.
+
+In general or dev env, just set `VITE_BUILD_PATH_PREFIX=''`, it should be no problem.

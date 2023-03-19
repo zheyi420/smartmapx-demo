@@ -46,7 +46,7 @@ const getRegionBelongTo = (coords) => {
 };
 
 const loadShanghaiRealEstatePoint = (map) => {
-  fetch('/geojson/ShanghaiRealEstatePoint.geojson')
+  fetch(`${import.meta.env.VITE_BUILD_PATH_PREFIX}/geojson/ShanghaiRealEstatePoint.geojson`)
     .then((response) => response.json())
     .then((data) => {
       map.addSource('ShanghaiRealEstatePoint', {
@@ -99,7 +99,7 @@ const loadShanghaiRealEstatePoint = (map) => {
 };
 
 const loadShanghaiCityRingArea = (map) => {
-  fetch('/geojson/ShanghaiCityRingArea.geojson')
+  fetch(`${import.meta.env.VITE_BUILD_PATH_PREFIX}/geojson/ShanghaiCityRingArea.geojson`)
     .then((response) => {
       // console.log('response:', response);
       return response.json();
